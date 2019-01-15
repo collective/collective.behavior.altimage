@@ -7,5 +7,5 @@ class AltImageViewlet(ViewletBase):
     """ A simple viewlet which renders altimage """
 
     def update(self):
-        self.context = IAltImage(self.context)
-        self.available = True if self.context.image else False
+        context = IAltImage(self.context)
+        self.available = True if context.altimage else False

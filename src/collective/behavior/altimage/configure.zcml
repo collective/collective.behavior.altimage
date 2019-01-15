@@ -53,7 +53,7 @@
 
   <browser:viewlet
     name="altimage"
-    for=".behavior.IAltImage"
+    for=".behavior.IAltImageMarker"
     view="plone.app.layout.globals.interfaces.IViewView"
     class=".browser.AltImageViewlet"
     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
