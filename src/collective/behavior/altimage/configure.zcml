@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
@@ -13,8 +14,6 @@
   -->
   <!--<includeDependencies package="." />-->
   <include package="plone.behavior" file="meta.zcml"/>
-
-  <include package=".browser" />
 
   <include file="permissions.zcml" />
 
@@ -50,6 +49,16 @@
     provides=".behavior.IAltImage"
     factory=".behavior.AltImage"
     marker=".behavior.IAltImageMarker"
+  />
+
+  <browser:viewlet
+    name="altimage"
+    for=".behavior.IAltImage"
+    view="plone.app.layout.globals.interfaces.IViewView"
+    class=".browser.AltImageViewlet"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+    template="altimage.pt"
+    permission="zope2.View"
   />
 
 </configure>
