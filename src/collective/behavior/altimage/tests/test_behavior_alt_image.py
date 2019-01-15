@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from collective.behavior.altimage.behaviors.altimage import IAltImageMarker
+from collective.behavior.altimage.behavior import IAltImageMarker
 from collective.behavior.altimage.testing import COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING  # noqa
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
@@ -20,11 +20,11 @@ class AltImageIntegrationTest(unittest.TestCase):
 
     def test_behavior_altimage(self):
         behavior = getUtility(
-            IBehavior, 'collective.behavior.altimage.altimage'
+            IBehavior, 'collective.behavior.altimage'
         )
         self.assertEqual(behavior.marker, IAltImageMarker)
         behavior_name = (
-            'collective.behavior.altimage.behaviors.altimage.IAltImage'
+            'collective.behavior.altimage.behavior.IAltImage'
         )
         behavior = getUtility(IBehavior, behavior_name)
         self.assertEqual(behavior.marker, IAltImageMarker)

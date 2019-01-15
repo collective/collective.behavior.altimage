@@ -20,7 +20,7 @@
 
   <browser:viewlet
     name="altimage"
-    for="..behaviors.altimage.IAltImage"
+    for="..behavior.IAltImage"
     view="plone.app.layout.globals.interfaces.IViewView"
     class=".viewlets.AltImageViewlet"
     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"

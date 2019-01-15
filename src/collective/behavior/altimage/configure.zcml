@@ -9,9 +9,10 @@
 
   <!--
     Be careful if you use general includeDependencies, it can have sideffects!
-    Better import explicite packages or configurations ;)
+    Better import explicit packages or configurations ;)
   -->
   <!--<includeDependencies package="." />-->
+  <include package="plone.behavior" file="meta.zcml"/>
 
   <include package=".browser" />
 
@@ -42,9 +43,13 @@
       name="collective.behavior.altimage-hiddenprofiles"
       />
 
-  <!-- -*- extra stuff goes here -*- -->
-
-    <include package=".behaviors" />
-
+  <plone:behavior
+    name="collective.behavior.altimage"
+    title="AltImage"
+    description="Alternative image field"
+    provides=".behavior.IAltImage"
+    factory=".behavior.AltImage"
+    marker=".behavior.IAltImageMarker"
+  />
 
 </configure>

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from collective.behavior.altimage.behaviors.altimage import IAltImage
+from collective.behavior.altimage.behavior import IAltImage
 from plone.app.layout.viewlets import ViewletBase
 
 
