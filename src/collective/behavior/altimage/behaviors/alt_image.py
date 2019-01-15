@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from collective.behavior.altimage import _
-from plone import schema
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
+from plone.namedfile import field as namedfile
 from plone.supermodel import model
 from zope.component import adapter
 from zope.interface import implementer
@@ -21,9 +21,9 @@ class IAltImage(model.Schema):
     """
     """
 
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
+    altimage = namedfile.NamedBlobImage(
+        title=_(u'Alternative image'),
+        description=u'',
         required=False,
     )
 
@@ -35,11 +35,11 @@ class AltImage(object):
         self.context = context
 
     @property
-    def project(self):
-        if hasattr(self.context, 'project'):
-            return self.context.project
+    def altimage(self):
+        if hasattr(self.context, 'altimage'):
+            return self.context.altimage
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @altimage.setter
+    def altimage(self, value):
+        self.context.altimage = value
