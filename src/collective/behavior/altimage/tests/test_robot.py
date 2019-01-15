@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
+from collective.behavior.altimage.testing import COLLECTIVE_BEHAVIOR_ALTIMAGE_ACCEPTANCE_TESTING  # noqa
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
-from collective.behavior.altimage.testing import (
-    COLLECTIVE_BEHAVIOR_ALTIMAGE_ACCEPTANCE_TESTING,
-)  # noqa
 
 import os
 import robotsuite

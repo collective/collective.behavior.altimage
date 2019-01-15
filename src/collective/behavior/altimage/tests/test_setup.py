@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+from collective.behavior.altimage.testing import COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING  # noqa
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from Products.CMFPlone.utils import get_installer
-from collective.behavior.altimage.testing import (
-    COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING,
-)  # noqa
 
 import unittest
 

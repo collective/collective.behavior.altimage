@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from collective.behavior.altimage.behaviors.alt_image import IAltImage
-from collective.behavior.altimage.testing import (
-    COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING,
-)  # noqa
+from collective.behavior.altimage.testing import COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING  # noqa
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.behavior.interfaces import IBehavior
