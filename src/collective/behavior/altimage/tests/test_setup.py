@@ -4,7 +4,9 @@ from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from Products.CMFPlone.utils import get_installer
-from collective.behavior.altimage.testing import COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING  # noqa
+from collective.behavior.altimage.testing import (
+    COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING,
+)  # noqa
 
 import unittest
 
@@ -21,17 +23,20 @@ class TestSetup(unittest.TestCase):
 
     def test_product_installed(self):
         """Test if collective.behavior.altimage is installed."""
-        self.assertTrue(self.installer.is_product_installed(
-            'collective.behavior.altimage'))
+        self.assertTrue(
+            self.installer.is_product_installed('collective.behavior.altimage')
+        )
 
     def test_browserlayer(self):
         """Test that ICollectiveBehaviorAltimageLayer is registered."""
         from collective.behavior.altimage.interfaces import (
-            ICollectiveBehaviorAltimageLayer)
-        from plone.browserlayer import utils
-        self.assertIn(
             ICollectiveBehaviorAltimageLayer,
-            utils.registered_layers())
+        )
+        from plone.browserlayer import utils
+
+        self.assertIn(
+            ICollectiveBehaviorAltimageLayer, utils.registered_layers()
+        )
 
 
 class TestUninstall(unittest.TestCase):
@@ -48,14 +53,17 @@ class TestUninstall(unittest.TestCase):
 
     def test_product_uninstalled(self):
         """Test if collective.behavior.altimage is cleanly uninstalled."""
-        self.assertFalse(self.installer.is_product_installed(
-            'collective.behavior.altimage'))
+        self.assertFalse(
+            self.installer.is_product_installed('collective.behavior.altimage')
+        )
 
     def test_browserlayer_removed(self):
         """Test that ICollectiveBehaviorAltimageLayer is removed."""
-        from collective.behavior.altimage.interfaces import \
-            ICollectiveBehaviorAltimageLayer
-        from plone.browserlayer import utils
-        self.assertNotIn(
+        from collective.behavior.altimage.interfaces import (
             ICollectiveBehaviorAltimageLayer,
-            utils.registered_layers())
+        )
+        from plone.browserlayer import utils
+
+        self.assertNotIn(
+            ICollectiveBehaviorAltimageLayer, utils.registered_layers()
+        )
