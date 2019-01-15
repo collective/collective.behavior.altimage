@@ -19,12 +19,8 @@ class AltImageIntegrationTest(unittest.TestCase):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
     def test_behavior_altimage(self):
-        behavior = getUtility(
-            IBehavior, 'collective.behavior.altimage'
-        )
+        behavior = getUtility(IBehavior, 'collective.behavior.altimage')
         self.assertEqual(behavior.marker, IAltImageMarker)
-        behavior_name = (
-            'collective.behavior.altimage.behavior.IAltImage'
-        )
+        behavior_name = 'collective.behavior.altimage.behavior.IAltImage'
         behavior = getUtility(IBehavior, behavior_name)
         self.assertEqual(behavior.marker, IAltImageMarker)

@@ -22,9 +22,7 @@ class IAltImage(model.Schema):
     """
 
     altimage = namedfile.NamedBlobImage(
-        title=_(u'Alternative image'),
-        description=u'',
-        required=False,
+        title=_(u'Alternative image'), description=u'', required=False
     )
 
 
