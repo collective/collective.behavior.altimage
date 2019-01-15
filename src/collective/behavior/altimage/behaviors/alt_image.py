@@ -11,6 +11,11 @@ from zope.interface import Interface
 from zope.interface import provider
 
 
+class IAltImageMarker(Interface):
+    """Marker interface for objects that have this behavior.
+    """
+
+
 @provider(IFormFieldProvider)
 class IAltImage(model.Schema):
     """

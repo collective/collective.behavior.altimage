@@ -15,7 +15,7 @@
         description="Alternative image field"
         provides=".alt_image.IAltImage"
         factory=".alt_image.AltImage"
-        marker=".alt_image.IAltImage"
+        marker=".alt_image.IAltImageMarker"
         />
 
 
