@@ -18,4 +18,14 @@
       directory="static"
       />
 
+  <browser:viewlet
+    name="altimage"
+    for="..behaviors.altimage.IAltImage"
+    view="plone.app.layout.globals.interfaces.IViewView"
+    class=".viewlets.AltImageViewlet"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+    template="altimage.pt"
+    permission="zope2.View"
+  />
+
 </configure>
