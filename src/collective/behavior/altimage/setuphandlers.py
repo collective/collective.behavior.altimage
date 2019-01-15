@@ -2,6 +2,11 @@
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 
+import logging
+
+
+logger = logging.getLogger(__name__)
+
 
 @implementer(INonInstallable)
 class HiddenProfiles(object):

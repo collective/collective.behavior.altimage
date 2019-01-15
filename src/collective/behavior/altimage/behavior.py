@@ -5,6 +5,7 @@ from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.namedfile import field as namedfile
 from plone.supermodel import model
+from Products.CMFPlone.utils import base_hasattr
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
@@ -34,7 +35,7 @@ class AltImage(object):
 
     @property
     def altimage(self):
-        if hasattr(self.context, 'altimage'):
+        if base_hasattr(self.context, 'altimage'):
             return self.context.altimage
         return None
 

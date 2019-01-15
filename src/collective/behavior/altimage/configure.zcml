@@ -42,6 +42,8 @@
       name="collective.behavior.altimage-hiddenprofiles"
       />
 
+  <adapter name="has_alt_image" factory=".indexers.has_alt_image" />
+
   <plone:behavior
     name="collective.behavior.altimage"
     title="AltImage"
