@@ -10,12 +10,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
-        name="collective.behavior.altimage.alt_image"
+        name="collective.behavior.altimage.altimage"
         title="AltImage"
         description="Alternative image field"
-        provides=".alt_image.IAltImage"
-        factory=".alt_image.AltImage"
-        marker=".alt_image.IAltImageMarker"
+        provides=".altimage.IAltImage"
+        factory=".altimage.AltImage"
+        marker=".altimage.IAltImageMarker"
         />
 
 

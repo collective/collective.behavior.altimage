@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from collective.behavior.altimage.behaviors.alt_image import IAltImageMarker
+from collective.behavior.altimage.behaviors.altimage import IAltImageMarker
 from collective.behavior.altimage.testing import COLLECTIVE_BEHAVIOR_ALTIMAGE_INTEGRATION_TESTING  # noqa
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
@@ -18,13 +18,13 @@ class AltImageIntegrationTest(unittest.TestCase):
         self.portal = self.layer['portal']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
-    def test_behavior_alt_image(self):
+    def test_behavior_altimage(self):
         behavior = getUtility(
-            IBehavior, 'collective.behavior.altimage.alt_image'
+            IBehavior, 'collective.behavior.altimage.altimage'
         )
         self.assertEqual(behavior.marker, IAltImageMarker)
         behavior_name = (
-            'collective.behavior.altimage.behaviors.alt_image.IAltImage'
+            'collective.behavior.altimage.behaviors.altimage.IAltImage'
         )
         behavior = getUtility(IBehavior, behavior_name)
         self.assertEqual(behavior.marker, IAltImageMarker)
