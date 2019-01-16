@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-15 15:16+0000\n"
+"POT-Creation-Date: 2019-01-16 16:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,13 +17,21 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.behavior.altimage\n"
 
-#: ../behavior.py:26
 #: ../configure.zcml:52
-msgid "Alternative image"
+msgid "Alternative image field"
 msgstr ""
 
 #: ../configure.zcml:52
 msgid "Provides an alternative (second) image field"
+msgstr ""
+
+#: ../behavior.py:27
+msgid "altimage_field_description"
+msgstr ""
+
+#. Default: "Alternative image"
+#: ../behavior.py:26
+msgid "altimage_field_title"
 msgstr ""
 
 #: ../configure.zcml:28

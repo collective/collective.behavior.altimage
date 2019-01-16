@@ -44,7 +44,7 @@
 
   <plone:behavior
     name="collective.behavior.altimage"
-    title="Alternative image"
+    title="Alternative image field"
     description="Provides an alternative (second) image field"
     provides=".behavior.IAltImage"
     factory=".behavior.AltImage"
