@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.behavior.altimage',
-    version='1.0a1',
+    version='1.0.0b1',
     description="Plone behavior for adding an alternative image, next to the lead image",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
