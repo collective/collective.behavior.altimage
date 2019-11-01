@@ -17,8 +17,9 @@ setup(
     version='1.0a1',
     description="Plone behavior for adding an alternative image, next to the lead image",
     long_description=long_description,
-    # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
+    # Get more from https://pypi.org/classifiers/
     classifiers=[
+        "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: 5.0",
@@ -31,7 +32,7 @@ setup(
     keywords='Python Plone',
     author='Maurits van Rees',
     author_email='m.van.rees@zestsoftware.nl',
-    url='https://pypi.python.org/pypi/collective.behavior.altimage',
+    url='https://github.com/collective/collective.behavior.altimage',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['collective', 'collective.behavior'],
