@@ -6,33 +6,9 @@
 collective.behavior.altimage
 ============================
 
-Tell me what your product does
-
-Features
---------
-
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
+Behavior for having an alternative image.
+Useful for having for example a lead image that you use in listings,
+and an alternative image that you use in the page header.
 
 
 Installation
@@ -56,14 +32,12 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.behavior.altimage/issues
 - Source Code: https://github.com/collective/collective.behavior.altimage
-- Documentation: https://docs.plone.org/foo/bar
 
 
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+If you are having issues, please let us know in the issue tracker.
 
 
 License
